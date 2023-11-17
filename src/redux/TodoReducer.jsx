@@ -30,6 +30,12 @@ const TodoReducer = (state = initial_state, action) => {
         case types.ADD_TACHE:
             newState.tasks = [...newState.tasks, {id:uuid(), task:action.payload, completed:false }]    
         break;
+        case types.DELETE_TACHE:
+            newState.tasks = newState.tasks.filter(t => t.id != action.payload)
+        break;
+        case types.MODIF_TACHE:
+            newState.tasks = newState.tasks.map(t => t.id == action.payload ? {...t, completed: !t.completed}:t)
+        break;
     }
     return newState;
 }

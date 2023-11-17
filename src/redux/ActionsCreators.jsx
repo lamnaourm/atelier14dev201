@@ -6,3 +6,17 @@ export const addtask = (text) => {
         payload: text
     }
 }
+
+export const deletetask = (id) => {
+    return {
+        type:types.DELETE_TACHE,
+        payload: id
+    }
+}
+
+export const modiftask = (id) => {
+    return {
+        type:types.MODIF_TACHE,
+        payload: id
+    }
+}
