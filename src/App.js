@@ -2,6 +2,7 @@ import './App.css';
 import AddTask from './components/AddTask';
 import ListTasks from './components/ListTasks';
 import Operations from './components/Operations';
+import StatsTodo from './components/StatsTodo';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <AddTask />
         <ListTasks />
         <Operations />
+        <StatsTodo />
       </div>
     </div>
   );
