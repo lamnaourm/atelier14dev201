@@ -1,12 +1,14 @@
 import React from 'react'
+import { MdDelete } from "react-icons/md";
+import { GrUpdate } from "react-icons/gr";
 
 export default function Task({tache}) {
   return (
     <div className='tache'>
-        <h5>{tache.task}</h5>
+        <h4 className={tache.completed ? 'barre':undefined}>{tache.task}</h4>
         <div>
-            <button>Modifier</button>
-            <button>Supprimer</button>
+            <button><GrUpdate /></button>
+            <button><MdDelete /></button>
         </div>
     </div>
   )
