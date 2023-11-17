@@ -1,4 +1,6 @@
 import uuid from "react-uuid";
+import * as types from './ActionsTypes'
+
 
 const initial_state = {
     tasks: [
@@ -20,11 +22,15 @@ const initial_state = {
     ]
 }
 
-const TodoReducer = (state=initial_state, action) => {
+const TodoReducer = (state = initial_state, action) => {
 
     let newState = { ...state }
 
-
+    switch (action.type) {
+        case types.ADD_TACHE:
+            newState.tasks = [...newState.tasks, {id:uuid(), task:action.payload, completed:false }]    
+        break;
+    }
     return newState;
 }
 

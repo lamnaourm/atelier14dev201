@@ -1,19 +1,27 @@
 .container {
-  display: flex;
   height: 100vh;
+  display: flex;
   justify-content: center;
   align-items: center;
   background-color: darkblue;
+
 }
+.todo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+}
+
 
 .list {
   width: fit-content;
   display: flex;
   gap: 10px;
   flex-direction: column;
-  background-color: white;
-  padding: 20px;
-  border-radius: 20px;
+
 }
 
 .tache {
@@ -37,6 +45,28 @@
 }
 
 .tache button {
+  padding: 5px;
+  font-size: 20px;
+  margin-left: 5px;
+  color: white;
+  background-color: rgb(3, 3, 56);
+  border: none;
+}
+
+.add {
+  display: flex;
+  gap: 10px;
+}
+
+.add input {
+  flex-grow: 1;
+  padding: 5px;
+  font-size: 20px;
+  outline-color: darkblue;
+
+}
+
+.add button {
   padding: 5px;
   font-size: 20px;
   margin-left: 5px;
