@@ -20,3 +20,21 @@ export const modiftask = (id) => {
         payload: id
     }
 }
+
+export const deleteAll = () =>{
+    return {
+        type:types.DELETE_ALL
+    }
+}
+
+export const deletetermine = () =>{
+    return {
+        type:types.DELETE_TERM
+    }
+}
+
+export const deleteNotermin = () =>{
+    return {
+        type:types.DELETE_NOTERM
+    }
+}
